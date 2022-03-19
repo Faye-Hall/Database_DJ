@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Add a form that when submitted creates a new playlist!</h1>
+
+<div class="form-div">
+    <form action="/playlists/add" method="post" class="add_playlist_form">
+        <div class="name">
+            <label for="name">Name: </label>
+            <input type="text" name="name" required>
+        </div>
+        <div class="description">
+            <label for="description">Description: </label>
+            <input type="text" name="conversion" required>
+        </div>
+
+        <p><a class="btn btn-primary" href="/playlists/add">Add a playlist</a></p>
+
+</div>
+
+
+
+
+{% endblock %}

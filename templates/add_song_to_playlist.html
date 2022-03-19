@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Add a song to {{ playlist.name }}</h1>
+
+<h1>Add a form that when submitted adds a song to this playlist!</h1>
+
+<div class="form-div">
+    <form action="/playlists/{int:playlist_id}/add-song" method="post" class="add_playlist_form">
+        <div class="song_id">
+            <label for="song_id">Song_id: </label>
+            <input type="number" name="name" required>
+        </div>
+        <div class="playlist_id">
+            <label for="playlist_id">Playlist_id: </label>
+            <input type="number" name="conversion" required>
+        </div>
+
+        <p><a class="btn btn-primary" href="/playlists/add">Add a playlist</a></p>
+
+</div>
+
+{% endblock %}
